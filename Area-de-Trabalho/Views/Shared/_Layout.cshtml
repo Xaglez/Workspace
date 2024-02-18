@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Area_de_Trabalho</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Area_de_Trabalho.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <aside>
+        <nav class="sidebar">
+            <a role="button" asp-controller="Home" asp-action="Index">
+                <span>
+                    <i class="material-symbols-outlined">Home</i>
+                    <span>Home</span>
+                </span>
+            </a>
+            <a role="button">
+                <span>
+                    <i class="material-symbols-outlined">view_agenda</i>
+                    <span>Agenda</span>
+                </span>
+            </a>
+            <a role="button">
+                <span>
+                    <i class="material-symbols-outlined">task</i>
+                    <span>Tarefas</span>
+                </span>
+            </a>
+            <a role="button">
+                <span>
+                    <i class="material-symbols-outlined">calculate</i>
+                    <span>Calculadora</span>
+                </span>
+            </a>
+            <a role="button">
+                <span>
+                    <i class="material-symbols-outlined">contacts</i>
+                    <span>Contatos</span>
+                </span>
+            </a>
+        </nav>
+    </aside>
+    <div class="container">
+        <main role="main" class="main">
+            @RenderBody()
+        </main>
+    </div>
+
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

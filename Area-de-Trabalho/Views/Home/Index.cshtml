@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="interface-home">
+    <div class="input-user">
+        <p class="fw-bold text-black title"> <img src="css/images/person.svg" width="30" height="30"/>You</p>
+        <p class="preserved-formatting">Como criar um site</p>
+    </div>
+    <div class="input-user">
+        <p class="fw-bold text-black title"><img src="css/images/chatgpt-icon.png" width="30" height="30" />Chat GPT</p>
+        <div>
+            <p class="preserved-formatting">
+                Planejamento: Antes de começar a criar o site, é importante ter um plano claro do que você quer alcançar com ele. Decida qual será o propósito do site, quem é seu público-alvo, que tipo de conteúdo você deseja incluir e como deseja que o site se pareça.
+            </p>
+        </div>
+    </div>
+    <div class="input-gpt">
+        <input id="inputGPT" type="text" placeholder="Mensagem ChatGPT..." onkeypress="handleKeyPress(event)" />
+    </div>
+</div>

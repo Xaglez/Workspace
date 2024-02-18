@@ -1,0 +1,175 @@
+/*Barra lateral do site*/
+
+* {
+    box-sizing: border-box;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #a7a7a7;
+    color: #fff;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 240px;
+    height: 100%;
+    padding: 40px 10px 30px 10px;
+    border-right: 1px solid #515151;
+    background-color: #515151;
+    transition: all 0.35s;
+    margin: 0;
+}
+
+.sidebar a {
+    height: 60px;
+    background-color: transparent;
+    border: 0px;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+ .sidebar a > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px 0 12px;
+    border-radius: 24px;
+    line-height: 1;
+ }
+
+.sidebar a:hover > span {
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+.sidebar a i {
+    position: relative;
+    font-size: 28px;
+    transition: 0.2s;
+}
+
+.sidebar a span {
+    font-size: 16px;
+}
+
+.sidebar > nav {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+/*Ajustando sidebar com apenas os icones*/
+
+@media (width < 920px) {
+    .sidebar {
+        width: 72px;
+    }
+
+        .sidebar > a span {
+            width: 50px;
+        }
+
+    .sidebar a > span span {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/*Fim barra lateral*/
+
+/*Corpo do documento*/
+
+/*Home*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.interface-home {
+    display: flex;
+    flex-direction: column;
+    background-color: inherit;
+    margin-left: 240px;
+    height: 100%;
+    padding: 16px 12px;
+    transition: all 0.35s;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.input-user {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.input-user > p > img{
+    margin-right: 20px;
+    margin-left: 20px;
+    color: #515151;
+}
+
+.preserved-formatting {
+    white-space: pre-wrap;
+    text-align: initial;
+    margin-left: 135px;
+    margin-right: 135px;
+    font-size: 17px;
+}
+
+.title {
+    text-align: initial;
+}
+
+.input-gpt {
+    margin-top: auto;
+    width: 100%;
+}
+
+
+    .interface-home input[type="text"] {
+        width: 100%;
+        height: 55px;
+        border: 2px solid #fff;
+        outline: none;
+        border-radius: 15px;
+        padding-left: 10px;
+        box-sizing: border-box;
+        transition: all 0.35s;
+        margin-bottom: 0;
+    }
+
+@media (width < 920px){
+
+    .interface-home {
+        margin-left: 72px;
+    }
+
+    .preserved-formatting {
+        margin-right: 20px;
+        margin-left: 20px;
+        font-size: 17px;
+    }
+}
